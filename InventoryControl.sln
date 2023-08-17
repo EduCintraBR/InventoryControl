@@ -3,9 +3,28 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.33913.275
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{676C4F63-5BAC-478B-A336-217C3DA41755}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BackEnd", "BackEnd", "{EE9B1B31-4870-4478-A489-1ADB4630B148}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryControl.Api", "InventoryControl.Api\InventoryControl.Api.csproj", "{0B3E1938-EA31-4861-8DBE-3D2D2067BFB5}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B3E1938-EA31-4861-8DBE-3D2D2067BFB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B3E1938-EA31-4861-8DBE-3D2D2067BFB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B3E1938-EA31-4861-8DBE-3D2D2067BFB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B3E1938-EA31-4861-8DBE-3D2D2067BFB5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0B3E1938-EA31-4861-8DBE-3D2D2067BFB5} = {EE9B1B31-4870-4478-A489-1ADB4630B148}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7BDAED45-8F68-4139-B98D-2B30343F17CC}
