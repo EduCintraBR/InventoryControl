@@ -35,5 +35,35 @@ namespace InventoryControl.Api.Controllers
 
             return new OkObjectResult(result);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(ProductDto productDto)
+        {
+            var result = await _productService.CreateProductAsync(productDto);
+
+            if (!result.IsSuccess) return new BadRequestObjectResult(result.Message);
+
+            return new OkObjectResult(result);
+        }
+
+        [HttpPut("{id:int}")]
+        public async Task<IActionResult> Update(int id, ProductDto productDto)
+        {
+            var result = await _productService.UpdateProductAsync(id, productDto);
+
+            if (!result.IsSuccess) return new BadRequestObjectResult(result.Message);
+
+            return new OkObjectResult(result);
+        }
+
+        [HttpDelete("{id:int}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var result = await _productService.DeleteProductAsync(id);
+
+            if (!result.IsSuccess) return new BadRequestObjectResult(result.Message);
+
+            return new OkObjectResult(result);
+        }
     }
 }

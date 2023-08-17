@@ -6,8 +6,8 @@ namespace InventoryControl.Api.Services.IServices
     {
         Task<ResponseDto> GetAll();
         Task<ResponseDto> Get(int id);
-        Task<ResponseDto> CreateProductAsync();
-        Task<ResponseDto> UpdateProductAsync();
-        Task<ResponseDto> DeleteProductAsync();
+        Task<ResponseDto> CreateProductAsync(ProductDto productDto);
+        Task<ResponseDto> UpdateProductAsync(int id, ProductDto productDto);
+        Task<ResponseDto> DeleteProductAsync(int id);
     }
 }
