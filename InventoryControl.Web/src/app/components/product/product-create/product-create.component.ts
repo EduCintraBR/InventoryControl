@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
-import { Product } from '../product.model';
+import { Product } from '../../../models/product.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { MatInputModule } from '@angular/material/input';
 
 @Component({
   selector: 'app-product-create',
@@ -11,8 +12,8 @@ import { Router } from '@angular/router';
 })
 export class ProductCreateComponent implements OnInit {
   product: Product = {
-    name: "Teste",
-    price: 125.98
+    name: "",
+    price: 0
   }
   constructor(private productService: ProductService, 
               private snackBar: MatSnackBar,
@@ -26,6 +27,10 @@ export class ProductCreateComponent implements OnInit {
       this.showMessage("Produto cadastrado com sucesso!");
       this.router.navigate(['/products']);
     })
+  }
+
+  cancel() : void {
+    this.router.navigate(['/products']);
   }
 
   showMessage(mensagem: string) : void {

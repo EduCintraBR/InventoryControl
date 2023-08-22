@@ -1,0 +1,13 @@
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px 0px 5px;
+}
+
+button {
+    margin-right: 15px;
+}
+
+.mb2 {
+    margin-bottom: 20px;
+}

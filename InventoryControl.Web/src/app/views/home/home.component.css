@@ -1,3 +1,7 @@
+.container{
+    height: 83vh;
+}
+
 .home .title {
     font-size: 3rem;
     font-weight: 300;
