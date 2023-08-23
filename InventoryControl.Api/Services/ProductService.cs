@@ -98,11 +98,11 @@ namespace InventoryControl.Api.Services
             return _response;
         }
 
-        public async Task<ResponseDto> UpdateProductAsync(int id, ProductDto productDto)
+        public async Task<ResponseDto> UpdateProductAsync(ProductDto productDto)
         {
             try
             {
-                var productToUpdate = await _db.Products.FirstOrDefaultAsync(a => a.Id == id);
+                var productToUpdate = await _db.Products.FirstOrDefaultAsync(a => a.Id == productDto.Id);
                 if(productToUpdate == null) 
                 {
                     _response.IsSuccess = false;

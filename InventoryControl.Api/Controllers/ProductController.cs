@@ -46,10 +46,10 @@ namespace InventoryControl.Api.Controllers
             return new OkObjectResult(result);
         }
 
-        [HttpPut("{id:int}")]
-        public async Task<IActionResult> Update(int id, ProductDto productDto)
+        [HttpPut]
+        public async Task<IActionResult> Update(ProductDto productDto)
         {
-            var result = await _productService.UpdateProductAsync(id, productDto);
+            var result = await _productService.UpdateProductAsync(productDto);
 
             if (!result.IsSuccess) return new BadRequestObjectResult(result.Message);
 
